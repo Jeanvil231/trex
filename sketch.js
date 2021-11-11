@@ -83,7 +83,7 @@ function draw(){
       jumpSound.play();
       }
 
-  console.log(trex.velocityY);
+  
   
   //gravedad
     trex.velocityY=trex.velocityY+0.5;
@@ -122,14 +122,13 @@ function draw(){
    
   
   
-  //console.log(gameState);
   
-    //console.count();
+    
     drawSprites();
    text("score "+score,500,50);
   
   trex.setCollider("rectangle",0,0,60,60);
-  trex.debug=true;
+  trex.debug=false;
   
   if (mousePressedOver(restart)){
     reset();
@@ -186,7 +185,7 @@ function spawnObstacles(){
 }
 
 function reset(){
-  console.log("restart");
+ 
  gameState=PLAY;
   score=0;
   trex.changeAnimation("running",trex_running);
